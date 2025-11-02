@@ -1,0 +1,127 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* smooth scrolling */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    padding: 40px 20px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .logo {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+/* Main content card */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 30px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px 25px;
+    border-radius: 15px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.card h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .card h2 {
+        font-size: 1.5rem;
+    }
+    
+    nav ul {
+        gap: 10px;
+    }
+}
+
+/* Custom scrollbar (WebKit browsers) */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffeb3b; /* cheese yellow */
+    background-image: radial-gradient(circle, rgba(0,0,0,0.2) 10%, transparent 11%); 
+    background-size: 20px 20px; /* spacing of "holes" */
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #f9a825; /* slightly darker yellow */
+    border-radius: 8px;
+    border: 3px solid #ffeb3b;
+}
