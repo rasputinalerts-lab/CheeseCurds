@@ -1,18 +1,20 @@
-/* Reset default styles */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Smooth scroll */
 html {
-    scroll-behavior: smooth; /* smooth scrolling */
+    scroll-behavior: smooth;
 }
 
+/* Body background */
 body {
     font-family: 'Arial', sans-serif;
     color: #fff;
-    background: url('background.png') no-repeat center center fixed;
+    background: url('assets/background.png') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -21,15 +23,15 @@ body {
 
 /* Header */
 header {
-    padding: 40px 20px 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
+    padding: 40px 20px 25px;
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
 }
 
 header .logo {
-    max-width: 150px;
+    width: 140px;
+    height: auto;
     margin-bottom: 15px;
 }
 
@@ -38,90 +40,92 @@ header h1 {
     margin-bottom: 15px;
 }
 
-/* Navigation */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
     justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 nav a {
-    text-decoration: none;
     color: #fff;
-    font-weight: bold;
-    transition: color 0.3s;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #ccc;
+    color: #fcd34d;
 }
 
-/* Main content card */
+/* Main content */
 main {
     flex: 1;
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px;
-    gap: 30px;
+    gap: 35px;
 }
 
 .card {
     background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 16px;
     padding: 30px 25px;
-    border-radius: 15px;
     max-width: 700px;
     width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
 .card h2 {
     font-size: 2rem;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .card p {
     font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 /* Footer */
 footer {
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    font-size: 0.9rem;
     text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.65);
+    font-size: 0.9rem;
+    color: #ddd;
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2rem;
-    }
-    
-    .card h2 {
-        font-size: 1.5rem;
-    }
-    
-    nav ul {
-        gap: 10px;
-    }
-}
-
-/* Custom scrollbar (WebKit browsers) */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 16px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #ffeb3b; /* cheese yellow */
-    background-image: radial-gradient(circle, rgba(0,0,0,0.2) 10%, transparent 11%); 
-    background-size: 20px 20px; /* spacing of "holes" */
+    background-color: #fcd34d; /* cheese yellow */
+    background-image: radial-gradient(circle, rgba(0,0,0,0.2) 10%, transparent 11%);
+    background-size: 18px 18px;
     border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #f9a825; /* slightly darker yellow */
+    background-color: #d97706; /* darker cheese */
     border-radius: 8px;
-    border: 3px solid #ffeb3b;
+    border: 3px solid #fcd34d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #b45309;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.9rem;
+    }
+    .card h2 {
+        font-size: 1.5rem;
+    }
 }
